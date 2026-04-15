@@ -13,16 +13,18 @@ public class empleado {
     String nombre;
     String apellido;
     String direccion;
+    float salario;
 
     public empleado() {
-        this(0,"","","");
+        this(0,"","","",0);
     }
 
-    public empleado(int id, String nombre, String apellido, String direccion) {
+    public empleado(int id, String nombre, String apellido, String direccion, float salario) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
         this.direccion = direccion;
+        this.salario = 0;
     }
 
     public int getId() {
@@ -56,9 +58,33 @@ public class empleado {
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
+
+    public float getSalario() {
+        return salario;
+    }
+
+    public void setSalario(float salario) {
+        this.salario = salario;
+    }
     
     
     
+    float total;
+    public float Calcularsalario() {
+    
+        total = salario + 5000;
+        
+        if(id > 30){
+        
+            total += 300; 
+        }else{
+        
+            total +=9000;
+        }
+        
+        return total;
+        
+    }
     
     
 }
