@@ -76,10 +76,10 @@ public class empleado {
         
         if(id > 30){
         
-            total += 300; 
+            total += 300+100; 
         }else{
         
-            total +=9000;
+            total +=9000+100;
         }
         
         return total;
